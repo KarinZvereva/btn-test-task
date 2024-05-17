@@ -1,0 +1,21 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["@vovkasm/tslint-config"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "quotemark": { "options": ["single", "jsx-double"] },
+    "object-literal-key-quotes": { "options": ["as-needed"] },
+    "prettier": true,
+    "space-before-function-paren": { "severity": "off" },
+    "indent": [true, "spaces", 2],
+    "trailing-comma": { "severity": "off" },
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-ordering": false,
+    "no-console": false
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

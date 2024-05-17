@@ -1,0 +1,15 @@
+@import "variables";
+
+body {
+  background-color: $color-surface-primary;
+  color: $color-text-primary;
+  font-family: Nunito Sans, serif;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 40px 40px;
+}
