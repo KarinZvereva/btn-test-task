@@ -4,16 +4,11 @@ import * as icons from './index'
 
 type Props = {
   type: string
-  color?: string
-  size?: 'small' | 'medium'
+  className?: string
 }
 
-const SIZES = {}
-
-const Icon: React.FC<Props> = ({ type, color = '#242424', size }: Props) => {
-  const w = 20
-  const h = 20
-  return type in icons ? icons[type]({ w, h, color }) : '?'
+const Icon: React.FC<Props> = ({ type, className }: Props) => {
+  return type in icons ? icons[type]({ className }) : '?'
 }
 
 export default Icon

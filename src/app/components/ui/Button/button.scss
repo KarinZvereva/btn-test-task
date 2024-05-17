@@ -1,4 +1,175 @@
+@import "../../../variables";
+
+$svg-size: 20px;
+$border-radius: 24px;
+
+$btn-icon-small-size: 36px;
+$btn-icon-medium-size: 44px;
+
+$outline-border: 1px;
+
+.btn-text {
+  transition-duration: .2s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  display: block;
+  font-weight: $weight;
+  color: $color-text-primary;
+  font-family: Nunito Sans, serif;
+  position: relative;
+  z-index: 2;
+}
 
 .btn {
+  transition-duration: .2s;
+  transition-property: background, border-color, outline;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  column-gap: $numbers-4;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+  border-radius: $border-radius;
+  color: $color-text-primary;
   cursor: pointer;
+  border: var(--border-width) solid var(--border-color);
+  width: fit-content;
+}
+
+.btn_icon_medium {
+  width: $btn-icon-medium-size;
+  height: $btn-icon-medium-size;
+}
+
+.btn_icon_small {
+  width: $btn-icon-small-size;
+  height: $btn-icon-small-size;
+}
+
+.btn_medium {
+  padding: 12px 16px;
+}
+
+.btn_small {
+  padding: 8px 12px;
+}
+
+a.btn {
+  text-decoration: none;
+  padding: calc(#{$numbers-12} - #{$border-width}) calc(#{$numbers-16} - #{$border-width});
+}
+
+a.btn:not(:disabled):focus {
+  outline: none;
+}
+
+.btn:disabled {
+  border-color: transparent;
+  cursor: not-allowed;
+  color: $color-border-primary
+}
+
+.btn:disabled {
+  background: $color-neutral-100-10;
+}
+
+.btn:disabled svg {
+  fill: $color-neutral-100-80;
+}
+
+.btn:before {
+  transition-duration: .2s;
+  transition-property: background;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+  background: transparent;
+}
+
+.btn svg {
+  transition-duration: .2s;
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  display: block;
+  width: $svg-size;
+  height: $svg-size;
+}
+
+.btn_medium {
+  font-size: $font-size-s;
+}
+
+.btn_accent {
+  background: $gradient-violet-1;
+  border-width: 0;
+}
+
+.btn:not(:disabled):focus {
+  outline: 2px solid $color-violet-500;
+}
+
+.btn_accent:not(:disabled):active:before {
+  background: $color-violet-600;
+}
+
+.btn_accent:not(:disabled):hover:before {
+  background: $color-violet-500;
+}
+
+.btn_outline {
+  background: $color-neutral-100-10;
+  border: $outline-border solid $color-border-primary;
+}
+
+.btn_outline:not(:disabled):active {
+  border-color: $color-border-secondary;
+}
+
+.btn_outline:not(:disabled):hover {
+  border-color: $color-border-secondary;
+}
+
+.btn_link {
+  padding: 0;
+}
+
+.btn_link:not(:disabled):hover svg {
+  fill: $color-neutral-100-80;
+}
+
+.btn_link:disabled {
+  background: transparent;
+}
+
+.btn_primary {
+  background: $color-surface-secondary;
+}
+
+.btn_primary:not(:disabled):active {
+  background: transparent;
+}
+
+.btn_primary:not(:disabled):hover {
+  background: transparent;
+}
+
+.btn_secondary {
+  background: $color-surface-contrast;
+}
+
+.btn_secondary:not(:disabled):active {
+  background: $color-surface-contrast-secondary;
+}
+
+.btn_secondary:not(:disabled):hover {
+  background: $color-surface-contrast-secondary;
 }

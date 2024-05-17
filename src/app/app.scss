@@ -4,6 +4,7 @@ body {
   background-color: $color-surface-primary;
   color: $color-text-primary;
   font-family: Nunito Sans, serif;
+  margin: 0;
 }
 
 .container {
@@ -12,4 +13,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
   align-items: start;
   gap: 40px 40px;
+}
+
+svg {
+  z-index: 2;
+  position: relative;
+  fill: $svg-color;
 }
